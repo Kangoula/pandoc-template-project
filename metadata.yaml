@@ -1,0 +1,19 @@
+---
+title: "My title"
+subtitle: "My subtitle"
+author: [author1]
+lang: "en-US"
+number-section: true
+documentClass: memoir
+date: "14/04/2020"
+keywords: [some, keywords]
+caption-justification: "justified"
+titlepage: true
+titlepage-rule-color: "777777"
+titlepage-rule-height: 2
+logo: "imageToUse.jpeg"
+logo-width: 120
+toc: true
+toc-own-page: true
+numbersections: true
+listings: true
