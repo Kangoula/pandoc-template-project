@@ -76,12 +76,14 @@ $for(classoption)$
 $endfor$
 ,tablecaptionabove
 ]{$if(beamer)$$documentclass$$else$$if(book)$scrbook$else$scrartcl$endif$$endif$}
+
 $if(beamer)$
 $if(background-image)$
 \usebackgroundtemplate{%
   \includegraphics[width=\paperwidth]{$background-image$}%
 }
 $endif$
+
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
@@ -750,10 +752,16 @@ $else$
 $endif$
 $endif$
 
+%% redefine \section to always start the section on a new page
+\let\oldsection\section
+\renewcommand{\section}{%
+  \clearpage
+  \oldsection%
+}
+
 %%
 %% end added
 %%
-
 \begin{document}
 
 %%
